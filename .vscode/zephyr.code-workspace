@@ -67,6 +67,8 @@
 		"editor.renderControlCharacters": false,
 		"files.trimFinalNewlines": true,
 		"files.associations": {
+			"compare": "c",
+			"cstdint": "c"
 		},
 		"files.watcherExclude": {
 			"**/.git/objects/**": true,
