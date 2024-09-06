@@ -1,0 +1,25 @@
+manifest:
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+    - name: rosterloh
+      url-base: https://github.com/rosterloh
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: main
+      import:
+        # By using name-allowlist we can clone only the modules that are
+        # strictly needed by the application.
+        name-allowlist:
+          - cmsis
+          - hal_atmel
+          - lvgl
+          - picolibc
+
+    - name: rosterloh-drivers
+      repo-path: zephyr-drivers
+      remote: rosterloh
+      revision: main
+      path: modules/lib/rosterloh-drivers

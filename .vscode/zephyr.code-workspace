@@ -1,0 +1,128 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "zephyrproject",
+			"path": "../../zephyr"
+		},
+		{
+			"name": "AppUnderDev",
+			"path": "../app/"
+		},
+		{
+			"name": "ZephyrTests",
+			"path": "../tests"
+		},
+		{
+			"name": "Drivers",
+			"path": "../../modules/lib/rosterloh-drivers"
+		}
+	],
+
+	"settings": {
+		"west": "${env:HOME}/envs/zephyr/bin/west",
+		"twister": {
+			"host_test_arch": "qemu_x86",
+		},
+		// Board support package settings:
+		"bsp": {
+			"cpu": "",  // must be used if multi core system (put _m4 or _m7 here for example)
+			"soc": "atmel_sam0",
+			"board": "robotis_openrb_150",
+			"vendor": "robotis",
+			"board_root": "${workspaceFolder:RepoRoot}/boards",
+			"board_path": "${config:bsp.board_root}/${config:bsp.vendor}/openrb_150",
+			"svd": "${workspaceFolder}/svd/ATSAMD21G18A.svd",
+			"debug_config": "${config:bsp.board_path}/support/openocd.cfg"
+		},
+		// App settings:
+		"app": {
+			"name": "${workspaceFolder:AppUnderDev}",
+			"build_dir": "${workspaceFolder:AppUnderDev}/build",
+			"zephyr_config": "",  // -DOVERLAY_CONFIG=<path_relative_to_sample> use ; for multiple files
+			"zephyr_dtc_overlay": "",  // "-DDTC_OVERLAY_FILE=boards/nucleo_f303re.overlay"  // -DDTC_OVERLAY_FILE=<path_relative_to_sample> use ; for multiple files
+			"compile_args": ""
+		},
+		"[c]": {
+			"editor.formatOnSave": true
+		},
+		"cmake.configureOnOpen": false,
+		// The number of spaces a tab is equal to. This setting is overridden
+		// based on the file contents when `editor.detectIndentation` is true.
+		"editor.tabSize": 8,
+		// Insert spaces when pressing Tab. This setting is overriden
+		// based on the file contents when `editor.detectIndentation` is true.
+		"editor.insertSpaces": false,
+		// When opening a file, `editor.tabSize` and `editor.insertSpaces`
+		// will be detected based on the file contents. Set to false to keep
+		// the values you've explicitly set, above.
+		"editor.detectIndentation": false,
+		"editor.rulers": [80],
+		"editor.cursorBlinking": "smooth",
+		"editor.formatOnSave": false,
+		"editor.codeActionsOnSave": [],
+		"editor.renderWhitespace": "all",
+		"editor.renderControlCharacters": false,
+		"files.trimFinalNewlines": true,
+		"files.associations": {
+		},
+		"files.watcherExclude": {
+			"**/.git/objects/**": true,
+			"**/.git/subtree-cache/**": true,
+			"**/node_modules/**": true,
+			"**/tmp/**": true,
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/node_modules": true,
+			"**/bower_components": true,
+			"**/dist/**": true,
+			"**/log/**": true,
+			"**/logs/**": true,
+			"**/.fdk/**": true,
+			"**/.west/**": true,
+			"**/.vscode/**": true,
+			"${workspaceRoot}/../zephyr/**": true
+		},
+		"files.exclude": {
+			"**/.git/objects/**": true,
+			"**/.git/subtree-cache/**": true,
+			"**/node_modules/**": true,
+			"**/tmp/**": true,
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/node_modules": true,
+			"**/bower_components": true,
+			"**/dist/**": true,
+			"**/log/**": true,
+			"**/.fdk/**": true,
+			"**/.west/**": true
+		},
+		"search.exclude": {
+			"**/.git/objects/**": true,
+			"**/.git/subtree-cache/**": true,
+			"**/node_modules/**": true,
+			"**/tmp/**": true,
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/node_modules": true,
+			"**/bower_components": true,
+			"**/dist/**": true,
+			"**/log/**": true,
+			"**/.west/**": true
+		},
+		"cortex-debug.variableUseNaturalFormat": false,
+		"devicetree.defaultBoard": "robotis_openrb_150",
+		"devicetree.zephyr": "${workspaceFolder:zephyrproject}"
+	}
+}

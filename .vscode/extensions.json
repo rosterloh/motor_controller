@@ -1,0 +1,15 @@
+{
+	"recommendations": [
+		// "nordic-semiconductor.nrf-connect-extension-pack",
+		"marus25.cortex-debug",
+		"mcu-debug.memory-view",
+		"mcu-debug.rtos-views",
+		"ms-vscode.cpptools",
+		"nordic-semiconductor.nrf-devicetree",
+		"nordic-semiconductor.nrf-kconfig",
+		"twxs.cmake"
+	],
+	"unwantedRecommendations": [
+		"ms-vscode.cmake-tools"
+	]
+}
