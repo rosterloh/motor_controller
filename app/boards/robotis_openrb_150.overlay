@@ -43,6 +43,21 @@
 	};
 };
 
+&sercom2 {
+	status = "okay";
+	current-speed = <115200>;
+
+	dynamixel {
+		status = "okay";
+		compatible = "robotis,dynamixel";
+
+		test_motor {
+			id = <1>;
+			label = "TEST";
+		};
+	};
+};
+
 &arduino_mkr_i2c {
 	neoslider: seesaw@30 {
 		status = "okay";

@@ -82,8 +82,8 @@
 	status = "okay";
 	compatible = "atmel,sam0-uart";
 	current-speed = <115200>;
-	rxpo = <3>;
-	txpo = <1>;
+	rxpo = <1>;
+	txpo = <0>;
 
 	pinctrl-0 = <&sercom2_uart_default>;
 	pinctrl-names = "default";
@@ -94,7 +94,7 @@
 	compatible = "atmel,sam0-uart";
 	current-speed = <115200>;
 	rxpo = <3>;
-	txpo = <1>;
+	txpo = <2>;
 
 	pinctrl-0 = <&sercom4_uart_default>;
 	pinctrl-names = "default";
@@ -105,7 +105,7 @@
 	compatible = "atmel,sam0-uart";
 	current-speed = <115200>;
 	rxpo = <3>;
-	txpo = <1>;
+	txpo = <2>;
 
 	pinctrl-0 = <&sercom5_uart_default>;
 	pinctrl-names = "default";

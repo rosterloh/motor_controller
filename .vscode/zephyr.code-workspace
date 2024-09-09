@@ -48,6 +48,8 @@
 		"[c]": {
 			"editor.formatOnSave": true
 		},
+		"C_Cpp.clang_format_style": "file",
+		"C_Cpp.clang_format_fallbackStyle": "LLVM",
 		"cmake.configureOnOpen": false,
 		// The number of spaces a tab is equal to. This setting is overridden
 		// based on the file contents when `editor.detectIndentation` is true.
@@ -58,6 +60,7 @@
 		// When opening a file, `editor.tabSize` and `editor.insertSpaces`
 		// will be detected based on the file contents. Set to false to keep
 		// the values you've explicitly set, above.
+		
 		"editor.detectIndentation": false,
 		"editor.rulers": [80],
 		"editor.cursorBlinking": "smooth",
@@ -68,7 +71,8 @@
 		"files.trimFinalNewlines": true,
 		"files.associations": {
 			"compare": "c",
-			"cstdint": "c"
+			"cstdint": "c",
+			"cstdlib": "c"
 		},
 		"files.watcherExclude": {
 			"**/.git/objects/**": true,
